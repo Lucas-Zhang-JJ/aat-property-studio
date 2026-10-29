@@ -1,34 +1,33 @@
 # AAT 豪宅内容工作室
 
-面向豪宅从业者与团队，在豆包工作里完成定位、选题、写稿、制作安排、成品归档和复盘。
+面向豪宅从业者与团队，在豆包工作里完成定位、选题、写稿、制作、归档和独立复盘。
 
-## 安装 0.22.0 试用版
+## 安装 0.22.1 完整试用版
 
-把下面整段发给豆包工作。已有资料和Key保留，旧版替换先由本人确认。
+把下面整段发给豆包工作。会安装技能，复用或安装口播工作台，并准备本机媒体与中文配音环境；已有版本替换先由本人确认。
 
 ```text
-请安装 AAT 豪宅内容工作室 0.22.0 公开试用版。本次只安装技能，不下载或安装口播工作台源码，也不把缺少的配套环境说成就绪。
+请安装 AAT 豪宅内容工作室 0.22.1及配套口播工作台。只从以下固定版本获取文件，无需我手动下载或上传 ZIP：
+https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.1/install.sh
+安装脚本 SHA256：ea13048d070cc8de569b559d76849c824557f5486ffcf18a5d1452921b9128b5
+清单：https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.1/install-manifest.json
+清单 SHA256：9df53f00850fe884dbffe76c70b71b15abe9b529336d09a211912a8deb680d74
 
-固定安装脚本：https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.0/install.sh
-脚本 SHA256：568f2f1939637bb4cba557e37cb38c77e90a1a6a3f9a7b731a978ffcdc8ace03
-固定清单：https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.0/install-manifest.json
-清单 SHA256：3ffc9395e02b4085c96b4fd8acd72681ff5830e6b5af8a81376b0b14ca0a0ae9
-
-先读取内置“创建技能”指引，取得文档支持且已存在的workspace/.user_skills。下载脚本至临时目录，SHA256匹配后用/bin/sh执行，参数为 --manifest 上述清单URL --sha256 上述清单SHA256 --skill-root 实际技能根目录。安装器准备独立Node和锁定依赖、自检并原样注册Skill；不要重写源码、搜索历史日志或修改私有数据库。发现旧版，展示差异并等待本人同意替换后传--replace当前指纹，保留备份和回滚回执，保护已有DATA、模型Key和登录资料。失败说明实际原因，不能反复自动重试。
-
-完成后在新会话确认能发现技能，从.aat-install.json取实际Node/CLI，调用doctor和video-production-options。配套工作台需使用者自行合法安装；如果已经有，复用原登记，再运行workbench-status、workbench-check及presenter-check分别说明实际状态。没有工作台或配音环境时，先报告缺项，不从非授权链接下载源码，不声称一体安装完成。普通定位、选题、写稿和其他现有内容流程仍可继续。已有本机配套环境的用户可以继续动画生成和剪辑。
-
-先locate找旧资料，确无旧库才引导在空目录初始化。默认豆包原生，模型Key仅本人私有配置；切换模型由本人明确选择，不静默回退。不要发布内容、发消息或改定时。macOS已验证，Windows仍未验收。
+先读取你内置“创建技能”的指引，取得文档支持的、已经存在的 workspace/.user_skills 路径；不要搜索历史日志、私有配置、数据库或缓存来寻找注册接口。下载脚本到临时目录并核对上述SHA256，匹配后用 /bin/sh 执行，参数为 --manifest 清单URL --sha256 清单SHA256 --skill-root 实际技能根目录。安装器自动准备独立Node与锁定依赖，校验原始发布文件、自检并注册Skill；同时检查已登记工作台，有则复用，没有则下载固定版本并安装到本机用户目录，准备独立Python、FFmpeg/FFprobe、语音模型和渲染浏览器，自动连接并实际检查。同时准备已验收的Talking动画与MeloTTS中文女声，并实际合成短句验证；首次依赖下载约1GB，需预留约5GB空间；显示进度，不改系统Python、全局PATH或现有工程。当前工作台一体安装适配macOS14及以上Apple Silicon；其他系统报告支持状态，不猜路径或换不兼容包。若我明确提供已有工作台路径，传--workbench-root该路径，不全盘搜索；已登记目录失效先找回，不另建资料替代。不要自行生成或重写技能源码。
+若发现旧版，先展示旧版与拟安装的0.22.1，再等待我明确同意替换，按当前指纹传--replace；保留回滚回执，不覆盖用户DATA、凭据或登录资料。登录/系统权限由我本人完成，不绕过。失败报告实际原因，保留现有版本，不反复重试。
+完成后在新会话实际确认技能可发现，按安装回执中的node/cli路径运行doctor、model-stages、workbench-status、workbench-check和presenter-check。明确分别说明技能安装、工作台连接、转写/粗剪和实际渲染检查结果；缺依赖或端口冲突不能称可开始剪辑。先locate找旧资料，确无旧库才引导选择空目录初始化。默认使用豆包原生；运行model-profiles确认包内11个无密钥预设可见，不覆盖已有模型配置。若我要求换模型，展示实际文本、视觉、图片、转录模型和缺项，由我通过私有文件或环境变量补Key（不在聊天粘贴密钥）并选择，全链路统一使用，不静默回退豆包。不要替我发布内容、发消息或改定时。
 ```
 
-## 这版有什么
+## 本版能力
 
-支持小红书图文、公众号文章、抖音短视频、播客的独立流程，以及用户口吻、房产知识、个人资产、对标、待写清单和独立复盘。短视频有真人出镜、AAT动画讲解、已有视频加工三种方式。
+小红书图文、公众号文章、抖音短视频、播客各走独立流程，共用定位、个人口吻、房产知识、用户资产、对标、待写清单和复盘。短视频可选真人出镜、AAT动画讲解或已有视频加工。
 
-已配置配套环境时，动画讲解沿用固定Talking形象及免费本地MeloTTS中文女声，可试听、查看进度、中断后继续、送工作台加字幕及剪辑，再预览归档。动画循环动嘴，非逐字口型，不支持本人克隆。
+AAT动画讲解按确认脚本生成固定Talking动画与免费本地MeloTTS中文女声，可试听、查看进度、中断后继续；原片送工作台加字幕、按需制作画面、预览、导出并归档。循环动嘴，非逐字口型，不是本人克隆。真人拍摄与其他录音仍由本人完成。
 
-**本次公开发布只包含AAT技能。口播工作台及媒体/配音环境不包含在公开下载中，首次安装不会自动获得这部分能力。**工作台含独立第三方许可，待授权范围确认后再提供单独分发；已有合法安装可继续连接。技术验证包括253项检查、隔离真实视频完整链路，以及正式豆包新会话版本/能力读回；不能替代使用者内容验收。
+新装自动准备配套工作台与私有Python/FFmpeg、转写模型、中文配音模型、渲染浏览器；当前完整新装支持macOS14及以上Apple Silicon，首次依赖约1GB，建议预留5GB。已有工作台可复用，原工程和素材保留；实际检查失败会报告缺项，安装成功不等于内容已经验收。其他系统暂未完成完整安装验收。
 
-模型预设含11个无Key方案，本人已有配置优先，补Key后需实际验证权限与能力。用户资料、Key与平台登录不随包上传；云端模型仍会处理本次获准材料。小红书RPA须本人登录并逐篇授权，其他新增平台仍手动发布。
+工作台基于Overlay Studio并包含video-talkcraft组件，原许可与署名随包保留；维护者已确认本次修改版公开分发和商业使用均在其授权范围内。分发说明见工作台包内AAT-DISTRIBUTION-NOTICE.md，不移除原作者的许可。
 
-[下载及版本说明](https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/tag/v0.22.0) · [安装提示词文件](https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.0/install-prompt.md)
+模型预设有11个无Key方案，本人已有配置优先；文本、视觉、图片等AI阶段随本人选择的模型方案执行，缺能力不静默回退。资料、Key和登录留在本人电脑，云端模型仍会处理本次获准材料。小红书RPA须本人登录并逐篇授权，新增平台仍手动发布。
+
+[下载与版本说明](https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/tag/v0.22.1) · [安装提示词文件](https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.22.1/install-prompt.md)
