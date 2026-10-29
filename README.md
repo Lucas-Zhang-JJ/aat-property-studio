@@ -1,20 +1,20 @@
 # AAT 豪宅内容工作室
 
-面向豪宅从业者与团队的内容共创助手，通过豆包工作使用Skill和本地CLI，无需MCP。
+面向豪宅从业者与团队的内容共创助手，通过豆包工作使用Skill和本地CLI。
 
-## 安装试用版 0.19.1
+## 安装试用版 0.19.2
 
 把下方整段发给豆包工作。首次下载/执行可能需要本人点击允许，已有版本替换需本人确认。macOS已实测；Windows安装入口尚未适配验收。
 
 ```text
-请安装 AAT 豪宅内容工作室 0.19.1。只从以下固定版本获取文件，无需我手动下载或上传 ZIP：
-https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.19.1/install.sh
+请安装 AAT 豪宅内容工作室 0.19.2。只从以下固定版本获取文件，无需我手动下载或上传 ZIP：
+https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.19.2/install.sh
 安装脚本 SHA256：818e08fb007cfd9a690ebe3ad8f032e660811d6a7ea533a29169595b9c2486a5
-清单：https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.19.1/install-manifest.json
-清单 SHA256：5538f6da40a551b0d65617aabaabda7c0ce150bed15e5ae592f24f0051bdec74
+清单：https://github.com/Lucas-Zhang-JJ/aat-property-studio/releases/download/v0.19.2/install-manifest.json
+清单 SHA256：d13a56e5931c6eb52b481ffa1e56235bda7280cb3e821222eb31387bc46a9247
 
-先读取你内置“创建技能”的指引，取得文档支持的、已经存在的 workspace/.user_skills 路径；不要搜索历史日志、私有配置、数据库或缓存来寻找注册接口。不配置MCP。下载脚本到临时目录并核对上述SHA256，匹配后用 /bin/sh 执行，参数为 --manifest 清单URL --sha256 清单SHA256 --skill-root 实际技能根目录。安装器自动准备独立Node与锁定依赖，校验原始发布文件、自检并注册Skill。不要自行生成或重写技能源码。
-若发现旧版，先展示旧版与拟安装的0.19.1，再等待我明确同意替换，按当前指纹传--replace；保留回滚回执，不覆盖用户DATA、凭据或登录资料。登录/系统权限由我本人完成，不绕过。失败报告实际原因，保留现有版本，不反复重试。
+先读取你内置“创建技能”的指引，取得文档支持的、已经存在的 workspace/.user_skills 路径；不要搜索历史日志、私有配置、数据库或缓存来寻找注册接口。下载脚本到临时目录并核对上述SHA256，匹配后用 /bin/sh 执行，参数为 --manifest 清单URL --sha256 清单SHA256 --skill-root 实际技能根目录。安装器自动准备独立Node与锁定依赖，校验原始发布文件、自检并注册Skill。不要自行生成或重写技能源码。
+若发现旧版，先展示旧版与拟安装的0.19.2，再等待我明确同意替换，按当前指纹传--replace；保留回滚回执，不覆盖用户DATA、凭据或登录资料。登录/系统权限由我本人完成，不绕过。失败报告实际原因，保留现有版本，不反复重试。
 完成后在新会话实际确认技能可发现，按安装回执中的node/cli路径运行doctor与model-stages。先locate找旧资料，确无旧库才引导选择空目录初始化。默认使用豆包原生；运行model-profiles确认包内11个无密钥预设可见，不覆盖已有模型配置。若我要求换模型，展示实际文本、视觉、图片、转录模型和缺项，由我通过私有文件或环境变量补Key（不在聊天粘贴密钥）并选择，全链路统一使用，不静默回退豆包。不要替我发布内容、发消息或改定时。
 ```
 
